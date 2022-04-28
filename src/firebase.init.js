@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAWoIINy7JYbsci1XcmAMBjy_jiChsI40w",
-  authDomain: "idealcrudandjwt.firebaseapp.com",
-  projectId: "idealcrudandjwt",
-  storageBucket: "idealcrudandjwt.appspot.com",
-  messagingSenderId: "190975960763",
-  appId: "1:190975960763:web:42c26d16c2e89957d2ab9e"
+  apiKey: "AIzaSyAbld8fh9GG-JDCZu4juvcFevv-bvrdwtQ",
+  authDomain: "thirstydrinks-11.firebaseapp.com",
+  projectId: "thirstydrinks-11",
+  storageBucket: "thirstydrinks-11.appspot.com",
+  messagingSenderId: "202458021821",
+  appId: "1:202458021821:web:9f4e77fb1ad874effa5cd4"
 };
 
 // Initialize Firebase
