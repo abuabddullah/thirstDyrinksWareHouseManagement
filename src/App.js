@@ -9,6 +9,9 @@ import Home from './pages/HomePage/Home/Home';
 import UploadItems from './pages/UploadItems/UploadItems';
 import Login from './pages/Login-Register-RequireAuth/Login/Login';
 import Register from './pages/Login-Register-RequireAuth/Register/Register';
+import RequireAuth from './pages/Login-Register-RequireAuth/RequireAuth/RequireAuth'
+
+
 
 function App() {
   return (
@@ -17,7 +20,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/itemsUp" element={<UploadItems />} />
+
+        <Route path="/itemsUp" element={
+          <RequireAuth>
+            <UploadItems />
+          </RequireAuth>
+        } />
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         {/* <Route path="about" element={<About />} /> */}

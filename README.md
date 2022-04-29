@@ -130,27 +130,27 @@ Live Site link: [https://myassignment-10.web.app/](https://myassignment-10.web.a
 
 
 ### [#] All image links:
-https://i.ibb.co/NN1dhYR/aqua-Mineral-water.jpg
-https://i.ibb.co/Y7TkWfY/aqua-water.jpg
-https://i.ibb.co/4jzSC7S/dorian-packedjuice.jpg
-https://i.ibb.co/pnL3YM1/durian-exoticjuice.jpg
-https://i.ibb.co/8x0mrkq/fresh-mangojuice.jpg
-https://i.ibb.co/M5RnJ93/fresh-Npure-mango-Juice.jpg
-https://i.ibb.co/VB9zw1Z/freshup-softdrinks.jpg
-https://i.ibb.co/D7LzQmL/fusion-jam-Juice.jpg
-https://i.ibb.co/Lvwqkcz/icetea-sofdrinks.jpg
-https://i.ibb.co/PTB2SMP/loren-water.jpg
-https://i.ibb.co/VY1bgMb/natural-blueberry-Juice.jpg
-https://i.ibb.co/QK5LNpm/natural-mixfruit-Juice.jpg
-https://i.ibb.co/g9y4jff/pran-mango-Juice.jpg
-https://i.ibb.co/YR3tSnX/puremineral-water.jpg
-https://i.ibb.co/M5RnJ93/fresh-Npure-mango-Juice.jpg
+https://i.ibb.co/NN1dhYR/aqua-Mineral-water.jpg \
+https://i.ibb.co/Y7TkWfY/aqua-water.jpg \
+https://i.ibb.co/4jzSC7S/dorian-packedjuice.jpg \
+https://i.ibb.co/pnL3YM1/durian-exoticjuice.jpg \
+https://i.ibb.co/8x0mrkq/fresh-mangojuice.jpg \
+https://i.ibb.co/M5RnJ93/fresh-Npure-mango-Juice.jpg \
+https://i.ibb.co/VB9zw1Z/freshup-softdrinks.jpg \
+https://i.ibb.co/D7LzQmL/fusion-jam-Juice.jpg \
+https://i.ibb.co/Lvwqkcz/icetea-sofdrinks.jpg \
+https://i.ibb.co/PTB2SMP/loren-water.jpg \
+https://i.ibb.co/VY1bgMb/natural-blueberry-Juice.jpg \
+https://i.ibb.co/QK5LNpm/natural-mixfruit-Juice.jpg \
+https://i.ibb.co/g9y4jff/pran-mango-Juice.jpg \
+https://i.ibb.co/YR3tSnX/puremineral-water.jpg \
+https://i.ibb.co/M5RnJ93/fresh-Npure-mango-Juice.jpg \
 
-https://i.ibb.co/98zrP4g/water-banner.jpg
-https://i.ibb.co/PCQTKJj/water-banner2.jpg
-https://i.ibb.co/cCvwhV8/softdrinks-banner.jpg
-https://i.ibb.co/jznNS9J/softdrinks-banner2.jpg
-https://i.ibb.co/mXFnYGh/juice-banner2.jpg
-https://i.ibb.co/BKwkN4y/juice-banner.jpg
+ \https://i.ibb.co/98zrP4g/water-banner.jpg \
+https://i.ibb.co/PCQTKJj/water-banner2.jpg \
+https://i.ibb.co/cCvwhV8/softdrinks-banner.jpg \
+https://i.ibb.co/jznNS9J/softdrinks-banner2.jpg \
+https://i.ibb.co/mXFnYGh/juice-banner2.jpg \
+https://i.ibb.co/BKwkN4y/juice-banner.jpg \
 
-https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png
+ \https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png \

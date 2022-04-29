@@ -8,6 +8,7 @@ import auth from '../../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import Loading from '../../sharedPages/Loading/Loading';
+import ResetPassModal from '../ResetPassModal/ResetPassModal';
 
 const Login = () => {
     // redirecting route
@@ -42,7 +43,7 @@ const Login = () => {
     }
     
 
-    // control navigation
+    // handle navigation
     useEffect(() => {
         if (user) {
             toast.success('Logging in Successful', { id: 'login' });
@@ -50,7 +51,7 @@ const Login = () => {
         }
     }, [user]);
 
-    // control error
+    // handle error
     useEffect(() => {
         if (error) {
             let message = error?.message;
@@ -58,7 +59,7 @@ const Login = () => {
         }
     }, [error]);
 
-    // control loading
+    // handle loading
     if (loading) {
         return <Loading />
     }
@@ -97,7 +98,8 @@ const Login = () => {
 
                             <div className="mt-3 text-center">
                                 <p>Not Have Account? <Link className='text-decoration-none text-white fw-bold' to='/register'>Register now</Link></p>
-                                <p style={{ color: "#fff", cursor: "pointer", fontWeight: "700" }}>Forgot password?</p>
+                                {/* <p style={{ color: "#fff", cursor: "pointer", fontWeight: "700" }}>Forgot password?</p> */}
+                                <ResetPassModal/>
                             </div>
                         </form>
 
