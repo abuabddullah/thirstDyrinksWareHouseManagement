@@ -38,6 +38,13 @@
 }
 
 .bg-orange {
-  background-color: #ffc107;
+  background-color: #ffc107 !important;
 }
 
+.bg-orangeTransparent {
+  background-color: #ff770749;
+}
+
+input:focus{
+  outline: #ffcd36;
+}

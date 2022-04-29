@@ -3,9 +3,23 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CustomLink } from './CustomLink'
+import auth from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
+import { toast } from 'react-toastify';
 
 const NavigationBar = () => {
+    const [user, loading, error] = useAuthState(auth);
 
+    // if (user) {        
+    //     console.log(user.displayName,user.email,user.photoURL);
+    // }
+
+    // handle logout
+    const logout = () => {
+        signOut(auth);
+        toast.success("Logged Out !")
+      };
     return (
         <Navbar collapseOnSelect expand="lg" className='bg-orange' variant="light" sticky="top">
             <Container>
@@ -23,17 +37,28 @@ const NavigationBar = () => {
                     <Nav className="me-auto navTag">
                         <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
                         <Nav.Link as={CustomLink} to="/items">Items</Nav.Link>
-                        <Nav.Link as={CustomLink} to="/itemsUp">Upload Items</Nav.Link>
+                        {
+                            user && 
+                            <Nav.Link as={CustomLink} to="/itemsUp">Upload Items</Nav.Link>
+                        }
 
 
 
                     </Nav>
                     <Nav className='navTag'>
-                        <Nav.Link>Log Out</Nav.Link>
-                        <Nav.Link as={CustomLink} to="/login">Login</Nav.Link>
-                        <Nav.Link eventKey={2} as={CustomLink} to="/myItems">
-                            My Items
-                        </Nav.Link>
+                        
+                    <Nav.Link as={CustomLink} to="/blogs">Blogs</Nav.Link>
+                        {
+                            user ? <>
+                            <Nav.Link eventKey={2} as={CustomLink} to="/myItems">
+                                My Items
+                            </Nav.Link>
+                            <Nav.Link onClick={logout}>Log Out</Nav.Link>
+                            <img src={user?.photoURL} width={40} height={30} alt="" className='img-fluid rounded-circle' />
+                            </> :
+                            <Nav.Link as={CustomLink} to="/login">Login</Nav.Link>
+                        }
+                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
