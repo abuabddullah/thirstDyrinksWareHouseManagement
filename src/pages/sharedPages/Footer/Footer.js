@@ -29,7 +29,7 @@ const Footer = () => {
                             <li><Link className='text-decoration-none text-white' to='/aboutItesms'>About Our Items</Link></li>
                             <li><Link className='text-decoration-none text-white' to='/blogs'>Read my blogs</Link></li>
                             <li><Link className='text-decoration-none text-white' to='/register'>Register</Link></li>
-                            <li><Link className='text-decoration-none text-white' to='/addItem'>Add Items</Link></li>
+                            <li><Link className='text-decoration-none text-white' to='/itemsUp'>Add Items</Link></li>
                         </ul>
                     </div>
                     <div className="col-12 col-md-3 text-md-end">

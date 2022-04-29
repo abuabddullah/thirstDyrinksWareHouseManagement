@@ -32,7 +32,7 @@ const UploadItems = () => {
 
 
         // post new item to db
-        const url = "http://localhost:5000/items";
+        const url = "https://still-citadel-40412.herokuapp.com/items";
         fetch(url, {
             method: 'POST',
             headers: {
@@ -129,7 +129,7 @@ const UploadItems = () => {
                         <Form.Control required name='supplierName' type="text" placeholder="Supplier Name" />
                     </FloatingLabel>
 
-                    <input className='d-block w-100 mx-auto bg-orange border-0 p-3 mt-3' type="submit" value="Update" />
+                    <input className='d-block w-100 mx-auto bg-orange border-0 p-3 mt-3' type="submit" value="Upload" />
                 </Form>
             </div>
         </section>

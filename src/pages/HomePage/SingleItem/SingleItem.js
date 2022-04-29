@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import LoginAlertModal from '../../Login-Register-RequireAuth/LoginAlertModal/LoginAlertModal';
 
@@ -30,7 +31,7 @@ const SingleItem = ({ item }) => {
                             </div>
                             <div className="d-grid gap-2">
                                 {
-                                    user ? <Button variant="warning" size="lg">
+                                    user ? <Button as={Link} to={`/inventory/${_id}`} variant="warning" size="lg">
                                         Update Item
                                     </Button> :
                                         <LoginAlertModal />

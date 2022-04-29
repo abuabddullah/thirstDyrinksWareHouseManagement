@@ -11,6 +11,8 @@ import Login from './pages/Login-Register-RequireAuth/Login/Login';
 import Register from './pages/Login-Register-RequireAuth/Register/Register';
 import RequireAuth from './pages/Login-Register-RequireAuth/RequireAuth/RequireAuth'
 import Footer from './pages/sharedPages/Footer/Footer';
+import MyItems from './pages/MyItems/MyItems';
+import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
 
 
 function App() {
@@ -27,9 +29,20 @@ function App() {
           </RequireAuth>
         } />
 
+        <Route path="/inventory/:id" element={
+          <RequireAuth>
+            <UpdateInventory />
+          </RequireAuth>
+        } />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="about" element={<About />} /> */}
+
+        <Route path="myItems" element={
+          <RequireAuth>
+            <MyItems />
+          </RequireAuth>
+        } />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
