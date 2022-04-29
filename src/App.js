@@ -13,6 +13,7 @@ import RequireAuth from './pages/Login-Register-RequireAuth/RequireAuth/RequireA
 import Footer from './pages/sharedPages/Footer/Footer';
 import MyItems from './pages/MyItems/MyItems';
 import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
+import AllItems from './pages/AllItems/AllItems';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/allItems" element={<AllItems />} />
 
         <Route path="/itemsUp" element={
           <RequireAuth>

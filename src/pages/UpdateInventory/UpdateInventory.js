@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useSingleItem from '../customHooks/useSingleItem/useSingleItem';
@@ -54,7 +54,7 @@ const UpdateInventory = () => {
     const handleSell = (e) => {
         if (pdQuantity) {
             setSoldQty(soldQty - 1);
-        }        
+        }
     }
 
 
@@ -150,6 +150,20 @@ const UpdateInventory = () => {
                             </div>
                         </Form>
                     )}
+
+                <>
+                    <div className='d-flex justify-content-center align-items-center mt-5'>
+                        <hr className="w-25" />
+                        <span className='mx-2'>or</span>
+                        <hr className="w-25" />
+                    </div>
+
+                    <div className="d-grid gap-2 mt-3">
+                        <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-dark' variant="outline-warning" size="lg">
+                            Manage Inventory
+                        </Button>
+                    </div>
+                </>
             </div>
         </section>
     );

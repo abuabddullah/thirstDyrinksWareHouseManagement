@@ -8,7 +8,7 @@ const useItems = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
-    }, []);
+    }, [items]);
 
     return [items, setItems];
 };

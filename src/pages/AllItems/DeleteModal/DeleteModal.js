@@ -1,0 +1,77 @@
+import React, { useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
+import { GiCrossedSabres } from "react-icons/gi";
+import { AiFillDelete } from "react-icons/ai";
+import useItems from '../../customHooks/useItems/useItems';
+import { toast } from 'react-toastify';
+
+const DeleteModal = ({ _id }) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+    // handle delete item
+    const [items, setItems] = useItems();
+    const handleDelete = (id) => {
+        // console.log(id);
+
+        const url = `https://still-citadel-40412.herokuapp.com/items/${id}`;
+        fetch(url, {
+            method: 'DELETE',
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    toast.success("Successfully Deleted !!", {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
+                    const remainingItems = items.filter(item => item._id !== id);
+                    setItems(remainingItems);
+                    handleClose();
+                }
+            })
+            .catch(err => console.log(err));
+    }
+
+
+
+    return (
+        <>
+            <Button variant="danger" onClick={handleShow} size="lg">
+                <AiFillDelete />
+            </Button>
+
+            <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>ID : <strong>{_id}</strong></Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <GiCrossedSabres className='d-block mx-auto display-1 fw-bold text-danger rounded-circle p-2 border border-danger' />
+                    <h2 className='text-center mt-3'>Want to Delete</h2>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button onClick={() => handleDelete(_id)} variant="danger">Delete</Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    );
+};
+
+export default DeleteModal;
