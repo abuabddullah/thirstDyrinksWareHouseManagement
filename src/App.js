@@ -10,13 +10,13 @@ import UploadItems from './pages/UploadItems/UploadItems';
 import Login from './pages/Login-Register-RequireAuth/Login/Login';
 import Register from './pages/Login-Register-RequireAuth/Register/Register';
 import RequireAuth from './pages/Login-Register-RequireAuth/RequireAuth/RequireAuth'
-
+import Footer from './pages/sharedPages/Footer/Footer';
 
 
 function App() {
   return (
     <div className="App">
-      <NavigationBar/>
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -32,7 +32,7 @@ function App() {
         {/* <Route path="about" element={<About />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    
+      <Footer />
       <ToastContainer />
     </div>
   );
