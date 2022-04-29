@@ -67,14 +67,14 @@ const Login = () => {
 
 
     return (
-        <section className='p-5'>
+        <section className='py-5 px-md-5'>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img
                         src="https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png"
                         width="50"
                         height="50"
-                        className="d-inline-block align-top bg-orange rounded-circle me-3"
+                        className="d-inline-block align-top bg-orange rounded-circle d-none d-md-block me-3"
                         alt="React Bootstrap logo"
                     />
                     Login Now</div>
@@ -82,11 +82,10 @@ const Login = () => {
                     <div className="col-12 col-lg-6 mb-5 d-none d-lg-block d-flex align-items-center justify-content-center">
                         <img src="https://i.ibb.co/g9y4jff/pran-mango-Juice.jpg" alt="" className='w-75 img-fluid rounded-circle' />
                     </div>
+
                     <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center">
 
-
-
-                        <form className='d-grid grid-cols-1 gap-2 bg-orangeTransparent p-4 pt-5 w-75 mx-auto' onSubmit={handleSubmit(onSubmit)}>
+                        <form className='d-grid grid-cols-1 gap-2 bg-orangeTransparent py-4 p-2 p-md-5 w-md-75 mx-auto' onSubmit={handleSubmit(onSubmit)}>
 
                             <input className='p-2 border-0' placeholder='Email' type="email" {...register("email", { required: true })} />
                             {errors.email?.type === 'required' && "Email is required"}
@@ -98,7 +97,6 @@ const Login = () => {
 
                             <div className="mt-3 text-center">
                                 <p>Not Have Account? <Link className='text-decoration-none text-white fw-bold' to='/register'>Register now</Link></p>
-                                {/* <p style={{ color: "#fff", cursor: "pointer", fontWeight: "700" }}>Forgot password?</p> */}
                                 <ResetPassModal/>
                             </div>
                         </form>

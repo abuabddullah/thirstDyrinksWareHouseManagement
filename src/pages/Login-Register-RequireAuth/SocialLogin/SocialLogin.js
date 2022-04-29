@@ -54,7 +54,7 @@ const SocialLogin = () => {
             </div>
 
             <div className="d-grid gap-2 mt-3">
-                <Button onClick={handleGoogleSignIn} className='w-50 mx-auto text-dark' variant="outline-warning" size="lg">
+                <Button onClick={handleGoogleSignIn} className='w-md-50 mx-auto text-dark' variant="outline-warning" size="lg">
                     <FaGoogle /> Login with Google
                 </Button>
             </div>

@@ -1,7 +1,10 @@
 # Welcome to **Thirsty Drinks**
 
-Project Repo Link: [https://github.com/programming-hero-web-course-4/independent-service-provider-abuabddullah](https://github.com/programming-hero-web-course-4/independent-service-provider-abuabddullah) \
-Live Site link: [https://myassignment-10.web.app/](https://myassignment-10.web.app/) 
+Project Repo Link(Frontend): [https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-abuabddullah](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-abuabddullah) \
+Live Site link(Frontend): [https://thirstydrinks-11.web.app/](https://thirstydrinks-11.web.app/) 
+
+Project Repo Link(Backend): [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-abuabddullah](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-abuabddullah) \
+Live Site link(Backend): [https://still-citadel-40412.herokuapp.com/](https://still-citadel-40412.herokuapp.com/) 
 
 
 

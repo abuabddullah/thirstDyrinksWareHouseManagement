@@ -7,7 +7,7 @@ import SingleItem from '../SingleItem/SingleItem';
 const InventoryItems = () => {
     const [items, setItems] = useItems();
     return (
-        <section className='mt-5 p-5'>
+        <section className='my-5 p-md-5'>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold '>
                     Inventory Items

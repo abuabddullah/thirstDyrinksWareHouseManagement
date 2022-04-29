@@ -50,19 +50,19 @@ const UploadItems = () => {
     }
 
     return (
-        <section className='p-5'>
+        <section className='py-5 px-md-5'>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img
                         src="https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png"
                         width="50"
                         height="50"
-                        className="d-inline-block align-top bg-orange rounded-circle me-3"
+                        className="d-inline-block align-top bg-orange rounded-circle  d-none d-md-block me-3"
                         alt="React Bootstrap logo"
                     />
                     Upload Items</div>
 
-                <Form onSubmit={handleSubmit} className='bg-orangeTransparent p-5 w-75 mx-auto'>
+                <Form onSubmit={handleSubmit} className='bg-orangeTransparent py-4 p-2 p-md-5 w-md-75 mx-auto'>
                     <FloatingLabel
                         controlId="floatingInput"
                         label="Email address"
