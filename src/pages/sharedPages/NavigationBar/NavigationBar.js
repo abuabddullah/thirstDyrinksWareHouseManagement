@@ -11,9 +11,6 @@ import { toast } from 'react-toastify';
 const NavigationBar = () => {
     const [user, loading, error] = useAuthState(auth);
 
-    // if (user) {        
-    //     console.log(user.displayName,user.email,user.photoURL);
-    // }
 
     // handle logout
     const logout = () => {

@@ -195,7 +195,7 @@ const Login = () => {
         if (user) {
             getAccessToken(user)
             navigate(from, { replace: true });
-            console.log(user);
+            // console.log(user);
         }
     }, [user]);
 

@@ -13,7 +13,7 @@ import Forbidden from '../Login-Register-RequireAuth/Forbidden/Forbidden';
 
 const AllItems = () => {
     const [user, loading, error] = useAuthState(auth);
-    console.log(user);
+    // console.log(user);
     const navigate = useNavigate()
     return (
         <section className='py-5 px-md-5'>

@@ -89,7 +89,7 @@ const SingleItem = ({ item }) => {
 
     const location = useLocation();
     const pathName = location?.pathname;
-console.log(pathName);
+// console.log(pathName);
     return (
         <Col>
             <Card>
