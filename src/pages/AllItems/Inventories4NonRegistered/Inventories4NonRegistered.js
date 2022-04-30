@@ -8,19 +8,19 @@ const Inventories4NonRegistered = () => {
     const [items, setItems] = useItems();
     return (
         <div>
-                    {
-                        items.length > 0 ? (
-                            <Row xs={1} md={2} className="g-4">
+            {
+                items.length > 0 ? (
+                    <Row xs={1} md={2} className="g-4">
 
-                                {
-                                    items.map(item => <SingleItem
-                                        key={item._id}
-                                        item={item} />)
-                                }
+                        {
+                            items.map(item => <SingleItem
+                                key={item._id}
+                                item={item} />)
+                        }
 
-                            </Row>) : <Loading />
-                    }
-                </div>
+                    </Row>) : <Loading />
+            }
+        </div>
     );
 };
 

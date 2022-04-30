@@ -28,17 +28,6 @@ const AllItems = () => {
                     />
                     All Inventories</div>
 
-
-                {/* <div className={user && user.emailVerified ? "d-block" : "d-none"}>
-                    <Inventories4Registered />
-                </div> */}
-
-                {/* <div className={user ? "d-none" : "d-block"}>
-                    <Inventories4NonRegistered />
-                </div> */}
-
-
-
                 {
                     user ? (
                         <>

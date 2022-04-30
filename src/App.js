@@ -37,12 +37,12 @@ function App() {
             <UpdateInventory />
           </RequireAuth>
         } />
-        
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/blogs" element={<Blogs />} />
 
-        <Route path="myItems" element={
+        <Route path="/myItems" element={
           <RequireAuth>
             <MyItems />
           </RequireAuth>
