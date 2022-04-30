@@ -1,6 +1,12 @@
-import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import useMyItems from '../customHooks/useMyItems/useMyItems';
 
 const MyItems = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const [myItems, setMyItems] = useMyItems()
+
+
     return (
         <section className='py-5 px-md-5'>
             <div className="container">
@@ -12,8 +18,8 @@ const MyItems = () => {
                         className="d-inline-block align-top bg-orange rounded-circle d-none d-md-block me-3"
                         alt="React Bootstrap logo"
                     />
-                    My Items</div>
-                    
+                    My Items : {myItems.length}</div>
+
             </div>
         </section>
     );

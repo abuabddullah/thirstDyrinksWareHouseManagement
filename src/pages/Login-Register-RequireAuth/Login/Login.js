@@ -17,8 +17,8 @@ const Login = () => {
     const navigate = useNavigate()
 
 
-    
-    
+
+
     // get element from firebase react hook
     const [
         signInWithEmailAndPassword,
@@ -32,7 +32,7 @@ const Login = () => {
     // handle submit
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
-        const {email,password} = data || {}
+        const { email, password } = data || {}
 
         if (password.length >= 6) {
             signInWithEmailAndPassword(email, password)
@@ -41,13 +41,27 @@ const Login = () => {
             return;
         }
     }
-    
+
 
     // handle navigation
     useEffect(() => {
         if (user) {
-            toast.success('Logging in Successful', { id: 'login' });
-            navigate(from, { replace: true });
+            const url = `https://still-citadel-40412.herokuapp.com/login`;
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: user.email
+                })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    toast.success('Logging in Successful', { id: 'login' });
+                    localStorage.setItem('accessToken', data.token);
+                    navigate(from, { replace: true });
+                })
         }
     }, [user]);
 
@@ -97,13 +111,13 @@ const Login = () => {
 
                             <div className="mt-3 text-center">
                                 <p>Not Have Account? <Link className='text-decoration-none text-white fw-bold' to='/register'>Register now</Link></p>
-                                <ResetPassModal/>
+                                <ResetPassModal />
                             </div>
                         </form>
 
                     </div>
-                    
-                    <SocialLogin/>
+
+                    <SocialLogin />
 
                 </div>
             </div>

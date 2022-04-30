@@ -36,10 +36,10 @@ const NavigationBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto navTag">
                         <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
-                        <Nav.Link as={CustomLink} to="/allItems">All Items</Nav.Link>
+                        <Nav.Link as={CustomLink} to="/allItems">Manage All Items</Nav.Link>
                         {
                             user && 
-                            <Nav.Link as={CustomLink} to="/itemsUp">Upload Items</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/itemsUp">Add Items</Nav.Link>
                         }
 
 
