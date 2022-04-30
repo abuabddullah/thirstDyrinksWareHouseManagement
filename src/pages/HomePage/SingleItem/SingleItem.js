@@ -1,13 +1,18 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import LoginAlertModal from '../../Login-Register-RequireAuth/LoginAlertModal/LoginAlertModal';
+import LoginDeleteModal from '../../Login-Register-RequireAuth/LoginDeleteModal/LoginDeleteModal';
 
 const SingleItem = ({ item }) => {
     const [user, loading, error] = useAuthState(auth);
     const { _id, pdName, pdPrice, pdPicture, pdDescription, email, pdCategory, pdQuantity, supplierName } = item || {};
+
+    const location = useLocation();
+    const pathName = location?.pathname;
+
     return (
         <Col>
             <Card>
@@ -30,6 +35,12 @@ const SingleItem = ({ item }) => {
                                 <h4>Supplier : <strong>{supplierName}</strong></h4>
                             </div>
                             <div className="d-grid gap-2">
+
+                                {
+                                    pathName === '/allItems' && <LoginDeleteModal />
+                                }
+
+
                                 {
                                     user ? <Button as={Link} to={`/inventory/${_id}`} variant="warning" size="lg">
                                         Update Item

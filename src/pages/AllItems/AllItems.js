@@ -7,9 +7,12 @@ import SingleItem from '../HomePage/SingleItem/SingleItem';
 import Loading from '../sharedPages/Loading/Loading';
 import Inventories4NonRegistered from './Inventories4NonRegistered/Inventories4NonRegistered';
 import Inventories4Registered from './Inventories4Registered/Inventories4Registered';
+import { FaPlus } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const AllItems = () => {
     const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate()
     return (
         <section className='py-5 px-md-5'>
             <div className="container">
@@ -32,6 +35,9 @@ const AllItems = () => {
                 </div>
 
             </div>
+
+            <FaPlus onClick={()=>navigate(`/itemsUp`)} className='cursor-pointer d-inline-block bg-orangeTransparent display-1 p-2 rounded-circle position-fixed plusBtn border border-white' />
+
         </section>
     );
 };

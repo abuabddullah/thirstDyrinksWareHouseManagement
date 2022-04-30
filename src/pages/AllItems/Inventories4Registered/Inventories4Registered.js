@@ -1,54 +1,9 @@
-// import React from 'react';
-// import { Table } from 'react-bootstrap';
-// import useItems from '../../customHooks/useItems/useItems';
-
-// const Inventories4Registered = () => {
-//     const [items, setItems] = useItems();
-//     return (
-//         <Table responsive striped bordered hover>
-//             <thead>
-//                 <tr>
-//                     <th>#</th>
-//                     
-//                         <th >Table heading</th>
-//                   
-//                 </tr>
-//             </thead>
-//             <tbody>
-//                 <tr>
-//                     <td>1</td>
-//                     
-//                         <td >Table cell  </td>
-//                   
-//                 </tr>
-//                 <tr>
-//                     <td>2</td>
-//                     
-//                         <td >Table cell  </td>
-//                   
-//                 </tr>
-//                 <tr>
-//                     <td>3</td>
-//                     
-//                         <td >Table cell  </td>
-//                   
-//                 </tr>
-//             </tbody>
-//         </Table>
-//     );
-// };
-
-// export default Inventories4Registered;
-
-
-
-
-
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import useItems from '../../customHooks/useItems/useItems';
 import { AiFillDelete } from "react-icons/ai";
 import DeleteModal from '../DeleteModal/DeleteModal';
+import { Link } from 'react-router-dom';
 
 const Inventories4Registered = () => {
     const [items, setItems] = useItems();
@@ -90,10 +45,10 @@ const Inventories4Registered = () => {
                                 <td>{item.pdDescription.slice(0, 40) + ". . ."}</td>
                                 <td>
                                     <div className="d-grid gap-2">
-                                        {/* <Button onClick={() => handleDelete(item._id)} variant="danger" size="lg">
-                                            <AiFillDelete />
-                                        </Button> */}
-                                        <DeleteModal _id={item._id}/>
+                                        <DeleteModal _id={item._id} />
+                                        <Button as={Link} to={`/inventory/${item._id}`} variant="warning" size="lg">
+                                            Update
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>)

@@ -72,3 +72,15 @@ input:focus{
   display: flex;
   align-items: center;
 }
+
+.h100vh {
+  height: 100vh !important;
+}
+
+
+
+
+.plusBtn{
+  bottom: 10vh;
+  right: 10vw;
+}

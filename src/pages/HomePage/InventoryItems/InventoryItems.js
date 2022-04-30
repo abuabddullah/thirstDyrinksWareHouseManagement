@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useItems from '../../customHooks/useItems/useItems';
 import Loading from '../../sharedPages/Loading/Loading';
 import SingleItem from '../SingleItem/SingleItem';
@@ -14,7 +15,7 @@ const InventoryItems = () => {
                     <hr className="w-25 text-orange p-1 mx-auto" />
                 </div>
                 {
-                    items.length > 0 ? (
+                    items.length > 0 ? (<>
                         <Row xs={1} md={2} className="g-4">
 
                             {
@@ -23,8 +24,24 @@ const InventoryItems = () => {
                                     item={item} />)
                             }
 
-                        </Row>) : <Loading/>
-}
+                        </Row>
+                        <>
+                            <div className='d-flex justify-content-center align-items-center mt-5'>
+                                <hr className="w-25" />
+                                <span className='mx-2'>or</span>
+                                <hr className="w-25" />
+                            </div>
+
+                            <div className="d-grid gap-2 mt-3">
+                                <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-dark' variant="outline-warning" size="lg">
+                                    Manage Inventory
+                                </Button>
+                            </div>
+                        </>
+                    </>) : <Loading />
+                }
+
+
 
             </div>
         </section>
