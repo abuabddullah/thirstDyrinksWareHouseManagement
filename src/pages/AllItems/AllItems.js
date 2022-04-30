@@ -36,7 +36,7 @@ const AllItems = () => {
 
             </div>
 
-            <FaPlus onClick={()=>navigate(`/itemsUp`)} className='cursor-pointer d-inline-block bg-orangeTransparent display-1 p-2 rounded-circle position-fixed plusBtn border border-white' />
+            <FaPlus title='Want to add Items?' onClick={()=>navigate(`/itemsUp`)} className='cursor-pointer d-inline-block bg-orangeTransparent display-1 p-2 rounded-circle position-fixed plusBtn border border-white' />
 
         </section>
     );
