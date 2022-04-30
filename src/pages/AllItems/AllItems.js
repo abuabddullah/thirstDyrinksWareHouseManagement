@@ -9,9 +9,11 @@ import Inventories4NonRegistered from './Inventories4NonRegistered/Inventories4N
 import Inventories4Registered from './Inventories4Registered/Inventories4Registered';
 import { FaPlus } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import Forbidden from '../Login-Register-RequireAuth/Forbidden/Forbidden';
 
 const AllItems = () => {
     const [user, loading, error] = useAuthState(auth);
+    console.log(user);
     const navigate = useNavigate()
     return (
         <section className='py-5 px-md-5'>
@@ -27,16 +29,30 @@ const AllItems = () => {
                     All Inventories</div>
 
 
-                <div className={user ? "d-block" : "d-none"}>
+                {/* <div className={user && user.emailVerified ? "d-block" : "d-none"}>
                     <Inventories4Registered />
-                </div>
-                <div className={user ? "d-none" : "d-block"}>
+                </div> */}
+
+                {/* <div className={user ? "d-none" : "d-block"}>
                     <Inventories4NonRegistered />
-                </div>
+                </div> */}
+
+
+
+                {
+                    user ? (
+                        <>
+                        {
+                            user.emailVerified ? <Inventories4Registered /> : <Forbidden />
+                        }
+                        </>
+                    ) : <Inventories4NonRegistered />
+                }
+
 
             </div>
 
-            <FaPlus title='Want to add Items?' onClick={()=>navigate(`/itemsUp`)} className='cursor-pointer d-inline-block bg-orangeTransparent display-1 p-2 rounded-circle position-fixed plusBtn border border-white' />
+            <FaPlus title='Want to add Items?' onClick={() => navigate(`/itemsUp`)} className='cursor-pointer d-inline-block bg-orangeTransparent display-1 p-2 rounded-circle position-fixed plusBtn border border-white' />
 
         </section>
     );

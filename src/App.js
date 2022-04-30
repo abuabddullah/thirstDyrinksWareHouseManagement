@@ -14,6 +14,7 @@ import Footer from './pages/sharedPages/Footer/Footer';
 import MyItems from './pages/MyItems/MyItems';
 import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
 import AllItems from './pages/AllItems/AllItems';
+import Blogs from './pages/Blogs/Blogs';
 
 
 function App() {
@@ -36,8 +37,10 @@ function App() {
             <UpdateInventory />
           </RequireAuth>
         } />
+        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/blogs" element={<Blogs />} />
 
         <Route path="myItems" element={
           <RequireAuth>

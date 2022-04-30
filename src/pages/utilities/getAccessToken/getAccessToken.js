@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 const getAccessToken = (user) => {
-    const url = `http://localhost:5000/login`;
+    const url = `https://still-citadel-40412.herokuapp.com/login`;
     fetch(url, {
         method: 'POST',
         headers: {
