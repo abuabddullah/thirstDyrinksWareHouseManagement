@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import useItems from '../../customHooks/useItems/useItems';
 import Loading from '../../sharedPages/Loading/Loading';
 import SingleItem from '../SingleItem/SingleItem';
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const InventoryItems = () => {
     const [items, setItems] = useItems();
@@ -33,8 +34,8 @@ const InventoryItems = () => {
                             </div>
 
                             <div className="d-grid gap-2 mt-3">
-                                <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-dark' variant="outline-warning" size="lg">
-                                    Manage Inventory
+                                <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-warning' variant="link" size="lg">
+                                Manage Inventories <FaArrowAltCircleRight/>
                                 </Button>
                             </div>
                         </>

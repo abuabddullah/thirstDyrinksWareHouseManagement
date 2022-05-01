@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
@@ -41,7 +42,7 @@ const UpdateInventory = () => {
         }
         // console.log(updateInfo);
 
-        updateMethod(id, updateInfo);
+        updateMethod(id, updateInfo, "Item updated successfully");
     }
 
 
@@ -51,9 +52,17 @@ const UpdateInventory = () => {
         setSoldQty(pdQuantity);
     }, [pdQuantity])
 
-    const handleSell = (e) => {
-        if (pdQuantity) {
+    const handleDelivery = (e) => {
+        if (soldQty > 0) {
             setSoldQty(soldQty - 1);
+            const updateInfo = {
+                pdQuantity: soldQty - 1
+            }
+            updateMethod(id, updateInfo, "Item delivered successfully");
+
+        } else {
+            toast.error("Item is Stock out . Please re-stock");
+            return
         }
     }
 
@@ -63,13 +72,14 @@ const UpdateInventory = () => {
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img
-                        src="https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png"
+                        src={pdPicture}
                         width="50"
                         height="50"
                         className="d-inline-block align-top bg-orange rounded-circle d-none d-md-block me-3"
-                        alt="React Bootstrap logo"
+                        alt=""
                     />
                     Update Inventory</div>
+                <p className="text-center"><small><code>ID : {_id}</code></small></p>
 
                 {
                     loading ? <Loading /> : (
@@ -118,7 +128,7 @@ const UpdateInventory = () => {
                                 className="mb-3"
                             >
                                 <Form.Select defaultValue="" required name='pdCategory' size="lg" className='mb-3'>
-                                    <option></option>
+                                    <option>{pdCategory}</option>
                                     <option>Juice</option>
                                     <option>Drinks</option>
                                     <option>Water</option>
@@ -144,8 +154,8 @@ const UpdateInventory = () => {
                             <input className='d-block w-100 mx-auto bg-orange border-0 p-3 mt-3' type="submit" value="Update" />
 
                             <div className="d-grid gap-2 mt-3">
-                                <Button onClick={handleSell} variant="warning" size="lg">
-                                    Sold
+                                <Button onClick={handleDelivery} variant="warning" size="lg">
+                                    Delivered
                                 </Button>
                             </div>
                         </Form>
@@ -159,8 +169,8 @@ const UpdateInventory = () => {
                     </div>
 
                     <div className="d-grid gap-2 mt-3">
-                        <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-dark' variant="outline-warning" size="lg">
-                            Manage Inventory
+                        <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-warning' variant="link" size="lg">
+                            Manage Inventories <FaArrowAltCircleRight />
                         </Button>
                     </div>
                 </>

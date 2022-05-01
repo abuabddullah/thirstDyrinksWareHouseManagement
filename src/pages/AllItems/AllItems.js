@@ -24,7 +24,7 @@ const AllItems = () => {
                         width="50"
                         height="50"
                         className="d-inline-block align-top bg-orange rounded-circle d-none d-md-block me-3"
-                        alt="React Bootstrap logo"
+                        alt=""
                     />
                     All Inventories</div>
 

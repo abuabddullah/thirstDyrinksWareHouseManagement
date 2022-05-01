@@ -1,6 +1,8 @@
 import React from 'react';
-import { FloatingLabel, Form } from 'react-bootstrap';
+import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -58,7 +60,7 @@ const UploadItems = () => {
                         width="50"
                         height="50"
                         className="d-inline-block align-top bg-orange rounded-circle  d-none d-md-block me-3"
-                        alt="React Bootstrap logo"
+                        alt=""
                     />
                     Upload Items</div>
 
@@ -131,6 +133,20 @@ const UploadItems = () => {
 
                     <input className='d-block w-100 mx-auto bg-orange border-0 p-3 mt-3' type="submit" value="Upload" />
                 </Form>
+
+                <>
+                    <div className='d-flex justify-content-center align-items-center mt-5'>
+                        <hr className="w-25" />
+                        <span className='mx-2'>or</span>
+                        <hr className="w-25" />
+                    </div>
+
+                    <div className="d-grid gap-2 mt-3">
+                        <Button as={Link} to="/allItems" className='w-md-50 mx-auto text-warning' variant="link" size="lg">
+                            Manage Inventories <FaArrowAltCircleRight />
+                        </Button>
+                    </div>
+                </>
             </div>
         </section>
     );

@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-const updateMethod = (id, updateInfo) => {
+const updateMethod = (id, updateInfo,toastMessaage) => {
 
 
     const url = `https://still-citadel-40412.herokuapp.com/items/${id}`;
@@ -14,7 +14,8 @@ const updateMethod = (id, updateInfo) => {
         .then(res => res.json())
         .then(data => {
             console.log("success", data);
-            toast.success("Item updated successfully");
+            // toast.success("Item updated successfully");
+            toast.success(toastMessaage);
             // e.target.reset();
         })
         .catch(err => {

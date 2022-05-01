@@ -46,9 +46,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
 const useMyItems = (user) => {
-    // const [user, loading, error] = useAuthState(auth);
     const [myItems, setMyItems] = useState([]);
-    // console.log(user);
 
 
     useEffect(() => {
