@@ -1,7 +1,7 @@
 import './NavigationBar.css';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CustomLink } from './CustomLink'
 import auth from '../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 
 const NavigationBar = () => {
     const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
 
 
     // handle logout
@@ -17,6 +18,8 @@ const NavigationBar = () => {
         signOut(auth);
         toast.success("Logged Out !")
       };
+
+
     return (
         <Navbar collapseOnSelect expand="lg" className='bg-orange' variant="light" sticky="top">
             <Container>
@@ -51,7 +54,7 @@ const NavigationBar = () => {
                                 My Items
                             </Nav.Link>
                             <Nav.Link onClick={logout}>Log Out</Nav.Link>
-                            <img src={user?.photoURL} width={40} height={30} alt="" className='img-fluid rounded-circle' />
+                            <img onClick={()=>navigate(`/updateProfile`)} src={user?.photoURL} width={40} height={30} alt="" className='img-fluid rounded-circle cursor-pointer' title='Update Profile?' />
                             </> :
                             <Nav.Link as={CustomLink} to="/login">Login</Nav.Link>
                         }

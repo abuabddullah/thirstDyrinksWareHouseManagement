@@ -28,7 +28,7 @@ const ItemsStats = () => {
     return (
 
         <section className='my-5 p-md-5 bg-orange'>
-            <div className="container my-5 bg-white p-md-5">
+            <div className="container  overflow-hidden my-5 bg-white p-md-5">
                 <div data-aos="fade-down" className='mb-5 text-center display-5 fw-bold '>
                     Inventory Status
                     <hr className="w-25 text-orange p-1 mx-auto" />
@@ -61,7 +61,7 @@ const ItemsStats = () => {
                     </Col>
 
 
-                    <Col>
+                    <Col className='mb-5 mb-md-0'>
                         <Card data-aos="fade-left" className='border-warning border-2 shadow bg-warning'>
 
                             <Card.Body className='text-center bg-white rounded-3'>

@@ -15,6 +15,7 @@ import MyItems from './pages/MyItems/MyItems';
 import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
 import AllItems from './pages/AllItems/AllItems';
 import Blogs from './pages/Blogs/Blogs';
+import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 
 
 function App() {
@@ -48,6 +49,11 @@ function App() {
           </RequireAuth>
         } />
 
+        <Route path="/updateProfile" element={
+          <RequireAuth>
+            <UpdateProfile />
+          </RequireAuth>
+        } />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
