@@ -157,3 +157,10 @@ https://i.ibb.co/mXFnYGh/juice-banner2.jpg \
 https://i.ibb.co/BKwkN4y/juice-banner.jpg \
 
  \https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png \
+
+
+
+https://i.ibb.co/nQrJ474/js-vs-node.png \
+https://i.ibb.co/5R1P6QK/jwt.png \
+https://i.ibb.co/1K3qqvy/node-vs-mongodb.png \
+https://i.ibb.co/9wHFtQ7/sql-vs-nosql.png \

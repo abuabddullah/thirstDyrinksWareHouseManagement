@@ -17,7 +17,7 @@ const NavigationBar = () => {
     const logout = () => {
         signOut(auth);
         toast.success("Logged Out !")
-      };
+    };
 
 
     return (
@@ -38,27 +38,27 @@ const NavigationBar = () => {
                         <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
                         <Nav.Link as={CustomLink} to="/allItems">{user ? "Manage All Items" : "All Items"}</Nav.Link>
                         {
-                            user && 
-                            <Nav.Link as={CustomLink} to="/itemsUp">Add Items</Nav.Link>
+                            user && (<>
+                                <Nav.Link as={CustomLink} to="/itemsUp">Add Items</Nav.Link>
+                                <Nav.Link as={CustomLink} to="/myItems"> My Items </Nav.Link>
+                            </>)
                         }
 
 
 
                     </Nav>
                     <Nav className='navTag'>
-                        
-                    <Nav.Link as={CustomLink} to="/blogs">Blogs</Nav.Link>
+
+                        <Nav.Link as={CustomLink} to="/blogs">Blogs</Nav.Link>
                         {
                             user ? <>
-                            <Nav.Link eventKey={2} as={CustomLink} to="/myItems">
-                                My Items
-                            </Nav.Link>
-                            <Nav.Link onClick={logout}>Log Out</Nav.Link>
-                            <img onClick={()=>navigate(`/updateProfile`)} src={user?.photoURL} width={40} height={30} alt="" className='img-fluid rounded-circle cursor-pointer' title='Update Profile?' />
+                                <Nav.Link eventKey={2} as={CustomLink} to="/myBlogs"> My Blogs </Nav.Link>
+                                <Nav.Link onClick={logout}>Log Out</Nav.Link>
+                                <img onClick={() => navigate(`/updateProfile`)} src={user?.photoURL} width={40} height={30} alt="" className='img-fluid rounded-circle cursor-pointer' title='Update Profile?' />
                             </> :
-                            <Nav.Link as={CustomLink} to="/login">Login</Nav.Link>
+                                <Nav.Link as={CustomLink} to="/login">Login</Nav.Link>
                         }
-                        
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

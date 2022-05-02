@@ -62,10 +62,15 @@ const UpdateProfile = () => {
                     <button
                         className='bg-orange border-0 p-2 mt-3'
                         onClick={async () => {
-                            await updateProfile({ displayName, photoURL });
-                            navigate(from, { replace: true });
-                            toast.success('Updated profile');
-                            
+                            if (displayName && photoURL) {
+                                await updateProfile({ displayName, photoURL });
+                                navigate(from, { replace: true });
+                                toast.success('Updated profile');
+                            } else {
+                                toast.error('Please fill all fields');
+                                return
+                            }
+
                         }}
                     >
                         Update profile

@@ -16,6 +16,8 @@ import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
 import AllItems from './pages/AllItems/AllItems';
 import Blogs from './pages/Blogs/Blogs';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
+import WriteBlogs from './pages/WriteBlogs/WriteBlogs';
+import SingleBlogDetail from './pages/SingleBlogDetail/SingleBlogDetail';
 
 
 function App() {
@@ -42,6 +44,13 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:_id" element={<SingleBlogDetail />} />
+
+        <Route path="/writeBlogs" element={
+          <RequireAuth>
+            <WriteBlogs />
+          </RequireAuth>
+        } />
 
         <Route path="/myItems" element={
           <RequireAuth>
