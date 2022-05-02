@@ -11,7 +11,7 @@ const SingleBlog = ({ blog }) => {
 
                 <Card.Img variant="top" src={banner} className="img-fluid" />
                 <Card.Body>
-                    <Card.Title className='text-capitalize'>{blogTitle ? "Q" + blogTitle : `Q : ${heading1} and ${heading2}`}</Card.Title>
+                    <Card.Title className='text-capitalize'>{blogTitle}</Card.Title>
                     <Card.Text className=''>
                         {paragraph1.slice(0, 50)} <Link className='text-warning' to={`/blogs/${_id}`}><small>... read more <FaArrowAltCircleRight /></small></Link>
                     </Card.Text>

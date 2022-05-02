@@ -22,7 +22,7 @@ const SingleBlogDetail = () => {
                         className="d-inline-block align-top bg-orange rounded-circle d-none d-md-block me-3 border-warning border"
                         alt=""
                     />
-                    {blogTitle ? blogTitle : `${heading1} and ${heading2}`}</div>
+                    {blogTitle}</div>
 
                 <article>
                     <img src={banner} alt="" className='img-fluid' />

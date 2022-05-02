@@ -21,7 +21,7 @@ const NavigationBar = () => {
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" className='bg-orange' variant="light" sticky="top">
+        <Navbar collapseOnSelect expand="lg" className='bg-orange border border-white' variant="light" sticky="top">
             <Container>
                 <Navbar.Brand as={Link} to="/" className='fontLogo'>
                     <img

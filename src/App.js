@@ -29,6 +29,12 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/allItems" element={<AllItems />} />
 
+        <Route path="/myItems" element={
+          <RequireAuth>
+            <MyItems />
+          </RequireAuth>
+        } />
+
         <Route path="/itemsUp" element={
           <RequireAuth>
             <UploadItems />
@@ -49,12 +55,6 @@ function App() {
         <Route path="/writeBlogs" element={
           <RequireAuth>
             <WriteBlogs />
-          </RequireAuth>
-        } />
-
-        <Route path="/myItems" element={
-          <RequireAuth>
-            <MyItems />
           </RequireAuth>
         } />
 
