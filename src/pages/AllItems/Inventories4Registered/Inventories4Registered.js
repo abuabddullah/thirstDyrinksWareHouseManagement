@@ -31,22 +31,22 @@ const Inventories4Registered = () => {
                 {
                     items.length > 0 ? (
                         items.map((item, index) =>
-                            <tr key={item._id}>
+                            <tr key={item?._id}>
                                 <td>{index + 1}</td>
-                                <td className='text-capitalize'>{item.pdName}</td>
+                                <td className='text-capitalize'>{item?.pdName}</td>
                                 <td>
-                                    <img src={item.pdPicture} alt="" className='img-fluid ' />
+                                    <img src={item?.pdPicture} alt="" className='img-fluid ' />
                                 </td>
-                                <td>{item._id}</td>
-                                <td>{item.pdPrice}</td>
-                                <td>{item.pdCategory}</td>
-                                <td>{item.pdQuantity}</td>
-                                <td>{item.supplierName}</td>
-                                <td>{item.pdDescription.slice(0, 40) + ". . ."}</td>
+                                <td>{item?._id}</td>
+                                <td>{item?.pdPrice}</td>
+                                <td>{item?.pdCategory}</td>
+                                <td>{item?.pdQuantity}</td>
+                                <td>{item?.supplierName}</td>
+                                <td>{item?.pdDescription.slice(0, 40) + ". . ."}</td>
                                 <td>
                                     <div className="d-grid gap-2">
-                                        <DeleteModal _id={item._id} />
-                                        <Button as={Link} to={`/inventory/${item._id}`} variant="warning" size="lg">
+                                        <DeleteModal _id={item?._id} />
+                                        <Button as={Link} to={`/inventory/${item?._id}`} variant="warning" size="lg">
                                             Update
                                         </Button>
                                     </div>
