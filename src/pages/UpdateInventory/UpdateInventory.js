@@ -15,6 +15,11 @@ const UpdateInventory = () => {
     const { _id, pdName, pdPrice, pdPicture, pdDescription, email, pdCategory, pdQuantity, supplierName } = item || {}
 
 
+    // handle sold
+    const [soldQty, setSoldQty] = useState(0);
+    useEffect(() => {
+        setSoldQty(pdQuantity);
+    }, [pdQuantity])
 
     const [user, loading, error] = useAuthState(auth);
 
@@ -42,15 +47,11 @@ const UpdateInventory = () => {
         }
         // console.log(updateInfo);
 
-        updateMethod(id, updateInfo, "Item updated successfully");
+        updateMethod(id, updateInfo);
+        toast.success("Item updated successfully");
     }
 
 
-    // handle sold
-    const [soldQty, setSoldQty] = useState(0);
-    useEffect(() => {
-        setSoldQty(pdQuantity);
-    }, [pdQuantity])
 
     const handleDelivery = (e) => {
         if (soldQty > 0) {
@@ -58,7 +59,8 @@ const UpdateInventory = () => {
             const updateInfo = {
                 pdQuantity: soldQty - 1
             }
-            updateMethod(id, updateInfo, "Item delivered successfully");
+            updateMethod(id, updateInfo);
+            toast.success("Item delivered successfully");
 
         } else {
             toast.error("Item is Stock out . Please re-stock");

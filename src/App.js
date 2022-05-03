@@ -18,9 +18,16 @@ import Blogs from './pages/Blogs/Blogs';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import WriteBlogs from './pages/WriteBlogs/WriteBlogs';
 import SingleBlogDetail from './pages/SingleBlogDetail/SingleBlogDetail';
+import auth from './firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Loading from './pages/sharedPages/Loading/Loading';
 
 
 function App() {
+  const [user, loading, error] = useAuthState(auth);
+  if (loading) {
+    return <Loading />
+  }
   return (
     <div className="App">
       <NavigationBar />
@@ -63,6 +70,7 @@ function App() {
             <UpdateProfile />
           </RequireAuth>
         } />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

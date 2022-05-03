@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { Card, Col, Row } from 'react-bootstrap';
 import useItems from '../../customHooks/useItems/useItems';
 import Loading from '../../sharedPages/Loading/Loading';
+import CountUp from 'react-countup';
 
 const ItemsStats = () => {
 
@@ -54,7 +55,14 @@ const ItemsStats = () => {
 
                                     <Card.Body className='text-center bg-white rounded-3'>
                                         <Card.Title>Monthly Status : <strong>{thisMonth}</strong></Card.Title>
-                                        <h2 className='display-3 fw-bold my-4'>$ {netWorth}</h2>
+                                        <h2 className='display-3 fw-bold my-4'>
+                                            <CountUp
+                                                end={netWorth}
+                                                prefix="$"
+                                                duration={5}
+                                                delay={1}
+                                            />
+                                        </h2>
                                         <h2 className='fw-bold'>Net Worth</h2>
                                     </Card.Body>
                                 </Card>
@@ -66,7 +74,14 @@ const ItemsStats = () => {
 
                                     <Card.Body className='text-center bg-white rounded-3'>
                                         <Card.Title>Monthly Status : <strong>{thisMonth}</strong></Card.Title>
-                                        <h2 className='display-3 fw-bold my-4'>{netItems} pcs</h2>
+                                        <h2 className='display-3 fw-bold my-4'>
+                                            <CountUp
+                                                end={netItems}
+                                                suffix="pcs"
+                                                duration={5}
+                                                delay={1}
+                                            />
+                                        </h2>
                                         <h2 className='fw-bold'>Net Items</h2>
                                     </Card.Body>
                                 </Card>
@@ -78,7 +93,14 @@ const ItemsStats = () => {
 
                                     <Card.Body className='text-center bg-white rounded-3'>
                                         <Card.Title>Monthly Status : <strong>{thisMonth}</strong></Card.Title>
-                                        <h2 className='display-3 fw-bold my-4'>{netQuantity} pcs</h2>
+                                        <h2 className='display-3 fw-bold my-4'>
+                                            <CountUp
+                                                end={netQuantity}
+                                                suffix="pcs"
+                                                duration={5}
+                                                delay={1}
+                                            />
+                                        </h2>
                                         <h2 className='fw-bold'>Net Quantity</h2>
                                     </Card.Body>
                                 </Card>
