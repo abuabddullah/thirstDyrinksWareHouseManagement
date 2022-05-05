@@ -2,6 +2,7 @@ import React from 'react';
 import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import PageTitle from '../../sharedPages/PageTitle/PageTitle';
 
 const Forbidden = () => {
 
@@ -9,6 +10,7 @@ const Forbidden = () => {
 
     return (
         <section className='p-5'>
+        <PageTitle title="403! Forbidden"/>
             <div className="container">
                 <div className="row  justify-content-center align-items-center">
                     <div className="col-12 col-md-6  mb-5 p-3">

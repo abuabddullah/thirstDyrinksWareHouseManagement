@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import Loading from '../../sharedPages/Loading/Loading';
 import ResetPassModal from '../ResetPassModal/ResetPassModal';
 import getAccessToken from '../../utilities/getAccessToken/getAccessToken';
+import PageTitle from '../../sharedPages/PageTitle/PageTitle';
 
 const Login = () => {
     // redirecting route
@@ -69,6 +70,7 @@ const Login = () => {
 
     return (
         <section className='py-5 px-md-5'>
+        <PageTitle title="Login"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img

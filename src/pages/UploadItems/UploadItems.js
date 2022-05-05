@@ -5,6 +5,7 @@ import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import PageTitle from '../sharedPages/PageTitle/PageTitle';
 
 const UploadItems = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -52,6 +53,8 @@ const UploadItems = () => {
 
     return (
         <section className='py-5 px-md-5'>
+            
+        <PageTitle title="UploadItems"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img

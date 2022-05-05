@@ -10,12 +10,15 @@ import Inventories4Registered from './Inventories4Registered/Inventories4Registe
 import { FaPlus } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import Forbidden from '../Login-Register-RequireAuth/Forbidden/Forbidden';
+import PageTitle from '../sharedPages/PageTitle/PageTitle';
 
 const AllItems = () => {
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate()
     return (
         <section className='py-5 px-md-5'>
+            
+            <PageTitle title="AllItems"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img

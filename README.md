@@ -27,23 +27,23 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
 
 
 ## Technologies I Used:
-        * React js
-        * React Router
-        * React fontawesome
-        * React bootstrap
-        * React Firebase
-        * React Firebase hook
-        * React icons
-        * React toastify
-        * React AOS
-        * React Leaflet
-        * React count-up
-        * React Hook Form
-        * cors
-        * dotenv
-        * JWT
-        * mongodb
-        * nodemon
+* React js
+* React Router
+* React fontawesome
+* React bootstrap
+* React Firebase
+* React Firebase hook
+* React icons
+* React toastify
+* React AOS
+* React Leaflet
+* React count-up
+* React Hook Form
+* cors
+* dotenv
+* JWT
+* mongodb
+* nodemon
 
 
 

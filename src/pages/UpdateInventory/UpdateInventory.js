@@ -9,6 +9,7 @@ import useSingleItem from '../customHooks/useSingleItem/useSingleItem';
 import Loading from '../sharedPages/Loading/Loading';
 import { updateMethod } from '../utilities/updateMethod/updateMethod';
 import CountUp from 'react-countup';
+import PageTitle from '../sharedPages/PageTitle/PageTitle';
 
 const UpdateInventory = () => {
     const { id } = useParams();
@@ -74,6 +75,7 @@ const UpdateInventory = () => {
 
     return (
         <section className='py-5 px-md-5'>
+        <PageTitle title="UpdateInventory"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img

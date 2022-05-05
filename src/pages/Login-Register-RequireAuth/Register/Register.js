@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../sharedPages/Loading/Loading';
+import PageTitle from '../../sharedPages/PageTitle/PageTitle';
 import getAccessToken from '../../utilities/getAccessToken/getAccessToken';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
@@ -75,6 +76,7 @@ const Register = () => {
 
     return (
         <section className='py-5 px-md-5'>
+        <PageTitle title="Register"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img

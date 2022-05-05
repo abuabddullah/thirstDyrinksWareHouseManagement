@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import useMyItems from '../customHooks/useMyItems/useMyItems';
 import SingleItem from '../HomePage/SingleItem/SingleItem';
 import Loading from '../sharedPages/Loading/Loading';
+import PageTitle from '../sharedPages/PageTitle/PageTitle';
 
 const MyItems = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -12,6 +13,8 @@ const MyItems = () => {
 
     return (
         <section className='py-5 px-md-5'>
+            
+        <PageTitle title="MyItems"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img

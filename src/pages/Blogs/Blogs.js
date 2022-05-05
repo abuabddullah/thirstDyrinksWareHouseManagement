@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import useBlogs from '../customHooks/useBlogs/useBlogs';
 import LoginAlertModal from '../Login-Register-RequireAuth/LoginAlertModal/LoginAlertModal';
 import Loading from '../sharedPages/Loading/Loading';
+import PageTitle from '../sharedPages/PageTitle/PageTitle';
 import SingleBlog from '../SingleBlog/SingleBlog';
 
 const Blogs = () => {
@@ -16,6 +17,7 @@ const Blogs = () => {
 
     return (
         <section className='py-5 px-md-5'>
+        <PageTitle title="Blogs"/>
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img
