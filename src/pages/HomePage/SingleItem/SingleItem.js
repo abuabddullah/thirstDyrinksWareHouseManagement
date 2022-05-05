@@ -13,10 +13,9 @@ const SingleItem = ({ item }) => {
 
     const location = useLocation();
     const pathName = location?.pathname;
-// console.log(pathName);
     return (
         <Col>
-            <Card>
+            <Card className='hoverEffects'>
                 <div className="row">
                     <div className="col-5">
 

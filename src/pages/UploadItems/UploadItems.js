@@ -44,7 +44,6 @@ const UploadItems = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
                 toast.success("Item added successfully");
                 e.target.reset();
             })

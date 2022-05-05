@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 import useSingleItem from '../customHooks/useSingleItem/useSingleItem';
 import Loading from '../sharedPages/Loading/Loading';
 import { updateMethod } from '../utilities/updateMethod/updateMethod';
+import CountUp from 'react-countup';
 
 const UpdateInventory = () => {
     const { id } = useParams();
@@ -35,6 +36,8 @@ const UpdateInventory = () => {
         const pdQuantity = e.target?.pdQuantity?.value;
         const supplierName = e.target?.supplierName?.value;
 
+        setSoldQty(pdQuantity);
+
         const updateInfo = {
             email,
             pdName,
@@ -45,10 +48,10 @@ const UpdateInventory = () => {
             pdQuantity,
             supplierName
         }
-        // console.log(updateInfo);
 
         updateMethod(id, updateInfo);
         toast.success("Item updated successfully");
+        e.target.reset();
     }
 
 
@@ -77,12 +80,12 @@ const UpdateInventory = () => {
                         src={pdPicture}
                         width="50"
                         height="50"
-                        className="d-inline-block align-top bg-orange rounded-circle d-none d-md-block me-3"
+                        className="d-inline-block align-top bg-orange rounded-circle  d-none d-md-block me-3"
                         alt=""
                     />
-                    Update Inventory</div>
+                    Update Inventory
+                </div>
                 <p className="text-center"><small><code>ID : {_id}</code></small></p>
-
                 {
                     loading ? <Loading /> : (
 
@@ -138,14 +141,6 @@ const UpdateInventory = () => {
                             </FloatingLabel>
 
                             <FloatingLabel
-                                controlId="pdPriceInput"
-                                label="Item Quantity"
-                                className="mb-3"
-                            >
-                                <Form.Control required name='pdQuantity' defaultValue={soldQty || ""} type="number" placeholder="Item Quantity" />
-                            </FloatingLabel>
-
-                            <FloatingLabel
                                 controlId="SupplierNameInput"
                                 label="Supplier Name"
                                 className="mb-3"
@@ -153,13 +148,27 @@ const UpdateInventory = () => {
                                 <Form.Control required name='supplierName' defaultValue={supplierName || ""} type="text" placeholder="Supplier Name" />
                             </FloatingLabel>
 
-                            <input className='d-block w-100 mx-auto bg-orange border-0 p-3 mt-3' type="submit" value="Update" />
 
-                            <div className="d-grid gap-2 mt-3">
-                                <Button onClick={handleDelivery} variant="warning" size="lg">
-                                    Delivered
-                                </Button>
-                            </div>
+                            <Form.Group
+                                className="mb-3"
+                                controlId="pdPriceInput"
+                            >
+                                <Form.Label>
+                                    Item Quantity
+                                </Form.Label>
+                                <Form.Control
+                                    name='pdQuantity'
+                                    type="number"
+                                    placeholder="Item Quantity"
+                                    required
+                                />
+                                <Form.Text
+                                    className="text-muted">
+                                    Update Item Quantity...
+                                </Form.Text>
+                            </Form.Group>
+
+                            <input className='d-block w-100 mx-auto bg-orange border-0 p-3 mt-3' type="submit" value="Update" />
                         </Form>
                     )}
 
@@ -176,6 +185,34 @@ const UpdateInventory = () => {
                         </Button>
                     </div>
                 </>
+
+                <div className='position-fixed plusBtn border border-white bg-orangeTransparent p-1 p-md-3 rounded-3'>
+                    <p className='text-center'>
+                        <strong className='display-3 fw-bold'>
+                            <CountUp 
+                            duration={.1}
+                            end={soldQty}
+                            />
+                        </strong>
+                        <small className='d-none d-md-inline-block'>
+                            pcs
+                        </small>
+                    </p>
+
+                    <p className="text-center d-none d-md-block">
+                        <small>
+                            <code>
+                                ID : {_id}
+                            </code>
+                        </small>
+                    </p>
+
+                    <div className="d-grid gap-2 mt-3">
+                        <Button className='border border-white' onClick={handleDelivery} variant="warning" size="sm">
+                            Delivered
+                        </Button>
+                    </div>
+                </div>
             </div>
         </section>
     );

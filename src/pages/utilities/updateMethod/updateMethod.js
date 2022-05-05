@@ -14,8 +14,6 @@ const updateMethod = (id, updateInfo) => {
         .then(res => res.json())
         .then(data => {
             console.log("success", data);
-            // toast.success(toastMessaage);
-            // e.target.reset();
         })
         .catch(err => {
             console.log("error", err);

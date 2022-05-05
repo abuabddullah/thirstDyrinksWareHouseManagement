@@ -44,7 +44,6 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
         * JWT
         * mongodb
         * nodemon
-        * save
 
 
 
@@ -62,9 +61,9 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
 **_6) Home page এর Stock Items section এর update button এ click করলে আমাকে "/inventory/:id" page এ নিয়ে যাবে কিন্তু কিন্তু এই page টা থাকবে protected-route হিসেবে অর্থাৎ user login করা না থাকলে তাকে এই page এ ঢুকতে দিবে না_** \
 [ DONE ] \
 **_7) "/inventory/:id" page এ কিছু সেই id এর aginst এ তাঁর name,price,image,short-description,quantity,supplier Name থাকবেই পাশাপাশি সেখানে একটা "delivered/Sold" button থাকবে সেই button এ click করতে থাকলে তাঁর quantity এক-এক করে কমতে থাকবে_** \ 
-[ NOT DONE ] \
+[ DONE ] \
 **_8) "/inventory/:id" page এ একটা inputfield থাকুবে যেখানে click value বসিয়ে click করলে সেই কয়টা items সেই product এর quantity হিসেবে যোগ হয়ে যাবে_** \ 
-[ NOT DONE ] \
+[ DONE ] \
 **_9) "/inventory/:id" page এ "Manage inventory" নামক button or route থাকবে যেখানে click করলে অন্য একটা page নিয়ে যাবে (ManageAllItems page) যেখানে যত্তগুলা items আছে সব গুলা দেখাবে [table আকারে or card আকারে] অর্থাৎ HomePage এ দেখাব মাত্র ৬টা আর এই page এ দেখাব সব. আর এইখানে প্রতিটা item এর সাথে একটা করে "delete" button থাকবে যেটা তে click করলে একটা popup আসবে confirm করলে তা stock থেকে delete করে দেবে_** \ 
 [ DONE ] \
 **_10) "Manage inventory" page এ একটা "Add New Item" route থাকবে যেটাতে click করলে "AddNewItem" page এ নিয়ে যাবে সেখানে গিয়ে form এর সাহায্যে নতুন একটা item add করা যাবে এবং picture টা imgbb এর link হতে হবে পাশাপাশি useremail,name,price,image,short-description,quantity,supplier Name_** \ 
@@ -86,14 +85,14 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
         => What is the purpose of jwt and how does it work?    
 
 **_16) একটা meaningfull 404NotFound componetnt থাকতে হবে_** \
-[ NOT DONE ] \
+[ DONE ] \
 
 
 
 
 ### [#] bonous requirements:
 **_1) Login SignUp related error message গুলা UI তে দেখাতে হবে_** \
-[ NOT DONE ] \
+[ DONE ] \
 **_2) Email verification mail পাঠাতে হবে হবে_** \
 [ DONE ] \
 **_3) ResetPassword mail পাঠাতে হবে হবে_** \
@@ -101,15 +100,15 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
 **_4) Client side এর জন্য Minimum 12 টা meaning full commit থাকতে হবে_** \
 [ DONE ] \
 **_5) README.MD file টা meaningfull হতে হবে + সবগুলা live website and git repo link থাকবে +  আর ৫টা bullet point দিয়ে project features summary লিখতে হবে + যেই যেই library or framework(react,react-router,react-firebase,react-firebase-hook,react-bootstrap,react-fontawesome, toastify etc) use করা হয়েছে এই project তা লিখে দিতে হবে_** \
-[ NOT DONE ] \
+[ DONE ] \
 **_6) Full Website টা কে responsive করেতে হবে_** \
 [ DONE ] \
 **_7) fileName,componentName,variableName,code everything meaningfull and organized হতে হবে_** \
-[ NOT DONE ] \
+[ DONE ] \
 **_8) Loading Spinner use হতে হবে_** \
 [ DONE ] \
 **_9) Frontend and Backend দু জায়গায়ি environment variable use করতে হবে_** \
-[ NOT DONE ] \
+[ DONE ] \
 **_10) অন্তত পক্ষে login এর সময় JWT emplement করতে হবে আর সেই অনুযায়ি My Items page এ server থেকে get করার system থাকতে হবে (registration এ করা টা optional)_** \
 [ DONE ] \
 **_11) StackOverflow website এ একটা questioin করতে হবে আর সেই প্রশ্নের link submit করতে হবে অথবা অন্য কারো question এ আমারর answer এর link তাও না হলে বার approve না হলে github এর কোন একটা repository তে (react-firebase-hook) issues তৈরি করতে হবে_** \
@@ -123,7 +122,7 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
 **_2) Confirm popup কে default না দিয়ে modal দিয়ে করা_** \
 [ DONE ] \
 **_3) Mange Invetory page এ pagination implement করা_** \
-[ NOT DONE ] \
+[ DONE ] \
 **_3) Home page এ আরো extra কিছু component or প্রজেক্ট এ extra আরো কিছু route add করা implement করা_** \
 [ DONE ] \
 
@@ -141,7 +140,7 @@ Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-
 **_5) Also, if you want, you can use mongoose._** \
 [ NOT DONE ] \
 **_6) If possible, replace the default react favicon and give an icon for your website._** \
-[ NOT DONE ] \
+[ DONE ] \
 **_7) If possible give swr or react-query a try. This will be helpful in the future._** \
 [ NOT DONE ] \
 **_8) Local storage implementation._** \
@@ -165,19 +164,18 @@ https://i.ibb.co/QK5LNpm/natural-mixfruit-Juice.jpg \
 https://i.ibb.co/g9y4jff/pran-mango-Juice.jpg \
 https://i.ibb.co/YR3tSnX/puremineral-water.jpg \
 https://i.ibb.co/M5RnJ93/fresh-Npure-mango-Juice.jpg \
-
- \https://i.ibb.co/98zrP4g/water-banner.jpg \
 https://i.ibb.co/PCQTKJj/water-banner2.jpg \
-https://i.ibb.co/cCvwhV8/softdrinks-banner.jpg \
 https://i.ibb.co/jznNS9J/softdrinks-banner2.jpg \
 https://i.ibb.co/mXFnYGh/juice-banner2.jpg \
-https://i.ibb.co/BKwkN4y/juice-banner.jpg \
-
- \https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png \
-
-
-
+https://i.ibb.co/M53JXWf/thirsty-drinks-logos-black.png \
 https://i.ibb.co/nQrJ474/js-vs-node.png \
 https://i.ibb.co/5R1P6QK/jwt.png \
 https://i.ibb.co/1K3qqvy/node-vs-mongodb.png \
 https://i.ibb.co/9wHFtQ7/sql-vs-nosql.png \
+https://i.ibb.co/Qr5VqCX/fusion-jam-Juice-removebg-preview.png\
+https://i.ibb.co/VmcwrgB/pran-mango-Juice-removebg-preview.png\
+https://i.ibb.co/bm5zqS0/loren-water-removebg-preview.png\
+https://i.ibb.co/k5dGKvZ/aqua-water-removebg-preview.png\
+https://i.ibb.co/ZHkB46M/icetea-sofdrinks-removebg-preview.png\
+https://i.ibb.co/vsnTztM/durian-exoticjuice-removebg-preview.png\
+https://i.ibb.co/CKjgLpw/dorian-packedjuice-removebg-preview.png

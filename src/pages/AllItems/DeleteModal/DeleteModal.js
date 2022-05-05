@@ -15,7 +15,6 @@ const DeleteModal = ({ _id }) => {
     // handle delete item
     const [items, setItems] = useItems();
     const handleDelete = (id) => {
-        // console.log(id);
 
         const url = `https://still-citadel-40412.herokuapp.com/items/${id}`;
         fetch(url, {

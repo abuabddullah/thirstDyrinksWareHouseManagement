@@ -88,3 +88,10 @@ input:focus{
   right: 10vw;
 }
 
+
+.hoverEffects:hover{
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-10px);
+  border: 1px solid #ffcd36;
+
+}

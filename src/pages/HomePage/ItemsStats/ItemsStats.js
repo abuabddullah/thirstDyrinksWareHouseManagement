@@ -22,7 +22,6 @@ const ItemsStats = () => {
     let netQuantity = 0
     let itemsArray = []
     const arrt = items.map(item => {
-        // console.log(item); 
         netWorth += parseInt(item.pdPrice);
         netQuantity += parseInt(item.pdQuantity);
         itemsArray.push(item._id);

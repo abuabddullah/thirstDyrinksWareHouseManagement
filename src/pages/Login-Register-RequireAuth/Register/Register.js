@@ -52,7 +52,6 @@ const Register = () => {
         if (user) {
             getAccessToken(user)
             navigate(from, { replace: true });
-            // console.log(user);
         }
     }, [user]);
 

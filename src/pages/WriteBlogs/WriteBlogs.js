@@ -31,7 +31,6 @@ const WriteBlogs = () => {
             paragraph2,
             writer
         }
-        // console.log(blogInfo);
 
 
         const url = `https://still-citadel-40412.herokuapp.com/blogs`;
@@ -45,7 +44,6 @@ const WriteBlogs = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
                 toast.success("Blog added successfully");
                 e.target.reset();
             })
