@@ -17,12 +17,12 @@ const SingleItem = ({ item }) => {
         <Col>
             <Card className='hoverEffects'>
                 <div className="row">
-                    <div className="col-5">
+                    <div className="col-md-5">
 
                         <Card.Img variant="top" src={pdPicture} className="img-fluid h-100" />
 
                     </div>
-                    <div className="col-7 py-4">
+                    <div className="col-md-7 py-4">
                         <Card.Body>
                             <Card.Title className='text-capitalize'>{pdName}</Card.Title>
                             <Card.Text className='minH100'>

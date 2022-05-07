@@ -56,7 +56,7 @@ const DeleteModal = ({ _id }) => {
                 centered
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>ID : <strong>{_id}</strong></Modal.Title>
+                    <Modal.Title>ID : <strong><small>{_id}</small></strong></Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <GiCrossedSabres className='d-block mx-auto display-1 fw-bold text-danger rounded-circle p-2 border border-danger' />
