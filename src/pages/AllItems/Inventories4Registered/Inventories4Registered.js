@@ -38,7 +38,9 @@ const Inventories4Registered = () => {
     }, [perPageProducts]);
 
 
-
+    if (currentPage > noOfPages) {
+        setCurrentPage(noOfPages - 1);
+    }
 
 
 
@@ -50,16 +52,17 @@ const Inventories4Registered = () => {
                     className='mb-3'
                     id='selectOption'
                     aria-label="Default select example"
+                    defaultValue={perPageProducts}
                     onChange={(e) => setPerPageProducts(e.target.value)}
                 >
                     <option value="3">3</option>
-                    <option value="5" selected>5</option>
+                    <option value="5">5</option>
                     <option value="10">10</option>
                 </Form.Select>
 
                 <Pagination>
                     <Pagination.First
-                    onClick={() => setCurrentPage(0)}
+                        onClick={() => setCurrentPage(0)}
                     />
                     <Pagination.Prev
                         onClick={() => setCurrentPage(currentPage - 1)}
@@ -74,12 +77,12 @@ const Inventories4Registered = () => {
                             >{pNum + 1}</Pagination.Item>
                         })
                     }
-                    
+
                     <Pagination.Next
                         onClick={() => setCurrentPage(currentPage + 1)}
-                     />
+                    />
                     <Pagination.Last
-                    onClick={() => setCurrentPage(noOfPages - 1)}
+                        onClick={() => setCurrentPage(noOfPages - 1)}
                     />
                 </Pagination>
             </div>

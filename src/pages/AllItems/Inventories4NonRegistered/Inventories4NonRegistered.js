@@ -37,51 +37,54 @@ const Inventories4NonRegistered = () => {
     }, [perPageProducts]);
 
 
-
+    if (currentPage > noOfPages) {
+        setCurrentPage(noOfPages - 1);
+    }
 
 
 
     return (
         <>
-        <div className='mb-5'>
-            <label htmlFor="selectOption">Items Per Page :</label>
-            <Form.Select
-                className='mb-3'
-                id='selectOption'
-                aria-label="Default select example"
-                onChange={(e) => setPerPageProducts(e.target.value)}
-            >
-                <option value="3">3</option>
-                <option value="5" selected>5</option>
-                <option value="10">10</option>
-            </Form.Select>
+            <div className='mb-5'>
+                <label htmlFor="selectOption">Items Per Page :</label>
+                <Form.Select
+                    className='mb-3'
+                    id='selectOption'
+                    aria-label="Default select example"
+                    defaultValue={perPageProducts}
+                    onChange={(e) => setPerPageProducts(e.target.value)}
+                >
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </Form.Select>
 
-            <Pagination>
-                <Pagination.First
-                onClick={() => setCurrentPage(0)}
-                />
-                <Pagination.Prev
-                    onClick={() => setCurrentPage(currentPage - 1)}
-                />
+                <Pagination>
+                    <Pagination.First
+                        onClick={() => setCurrentPage(0)}
+                    />
+                    <Pagination.Prev
+                        onClick={() => setCurrentPage(currentPage - 1)}
+                    />
 
-                {
-                    [...Array(noOfPages).keys()].map((pNum, index) => {
-                        return <Pagination.Item
-                            key={index}
-                            active={currentPage === pNum}
-                            onClick={() => setCurrentPage(pNum)}
-                        >{pNum + 1}</Pagination.Item>
-                    })
-                }
-                
-                <Pagination.Next
-                    onClick={() => setCurrentPage(currentPage + 1)}
-                 />
-                <Pagination.Last
-                onClick={() => setCurrentPage(noOfPages - 1)}
-                />
-            </Pagination>
-        </div>
+                    {
+                        [...Array(noOfPages).keys()].map((pNum, index) => {
+                            return <Pagination.Item
+                                key={index}
+                                active={currentPage === pNum}
+                                onClick={() => setCurrentPage(pNum)}
+                            >{pNum + 1}</Pagination.Item>
+                        })
+                    }
+
+                    <Pagination.Next
+                        onClick={() => setCurrentPage(currentPage + 1)}
+                    />
+                    <Pagination.Last
+                        onClick={() => setCurrentPage(noOfPages - 1)}
+                    />
+                </Pagination>
+            </div>
 
             <div>
                 {

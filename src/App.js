@@ -20,13 +20,13 @@ import WriteBlogs from './pages/WriteBlogs/WriteBlogs';
 import SingleBlogDetail from './pages/SingleBlogDetail/SingleBlogDetail';
 import auth from './firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import Loading from './pages/sharedPages/Loading/Loading';
+import UserLoader from './pages/sharedPages/UserLoader/UserLoader';
 
 
 function App() {
   const [user, loading, error] = useAuthState(auth);
   if (loading) {
-    return <Loading />
+    return <UserLoader />
   }
   return (
     <div className="App">

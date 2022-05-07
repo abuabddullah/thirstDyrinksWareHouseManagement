@@ -60,7 +60,7 @@ const DeleteModal = ({ _id }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <GiCrossedSabres className='d-block mx-auto display-1 fw-bold text-danger rounded-circle p-2 border border-danger' />
-                    <h2 className='text-center mt-3'>Want to Delete</h2>
+                    <h2 className='text-center mt-3'>Sure to Delete ?</h2>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
