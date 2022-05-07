@@ -20,7 +20,7 @@ const Inventories4Registered = () => {
             .then(data => {
                 setItems(data)
             });
-    }, [currentPage, perPageProducts]);
+    }, [currentPage, perPageProducts,items]);
 
 
 

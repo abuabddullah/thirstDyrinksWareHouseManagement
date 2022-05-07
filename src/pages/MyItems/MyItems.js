@@ -37,7 +37,7 @@ const MyItems = () => {
                                         item={item} />)
                                 }
 
-                            </Row>) : <Loading />
+                            </Row>) : <h2 className="display-3 fw-bold text-center text-orange mt-5 h100vh">No Items</h2>
                     }
                 </div>
             </div>

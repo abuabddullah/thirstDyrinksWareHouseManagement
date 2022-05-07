@@ -19,7 +19,7 @@ const Inventories4NonRegistered = () => {
             .then(data => {
                 setItems(data)
             });
-    }, [currentPage, perPageProducts]);
+    }, [currentPage, perPageProducts,items]);
 
 
 
