@@ -61,7 +61,7 @@ const UpdateInventory = () => {
                 pdCategory: pdCategory,
                 pdQuantity: pdQuantity,
                 supplierName: supplierName,
-                remarks: `last updated on ${day}/${month}/${year} at ${hours}:${minutes}:${seconds}`
+                remarks: `last updated on ${day}/${month}/${year} at ${hours}:${minutes}:${seconds} by ${user?.email}`
             }
         } else {
             return toast.error("Price and Quantity must be greater than 0");
