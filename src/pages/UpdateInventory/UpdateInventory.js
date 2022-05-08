@@ -16,6 +16,16 @@ const UpdateInventory = () => {
     const [item, setItem] = useSingleItem(id);
     const { _id, pdName, pdPrice, pdPicture, pdDescription, email, pdCategory, pdQuantity, supplierName } = item || {}
 
+    // dating the change
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    // console.log(day, hours, minutes, seconds);
 
     // handle sold
     const [soldQty, setSoldQty] = useState(0);
@@ -36,18 +46,25 @@ const UpdateInventory = () => {
         const pdCategory = e.target?.pdCategory?.value;
         const pdQuantity = e.target?.pdQuantity?.value;
         const supplierName = e.target?.supplierName?.value;
+        let remarks;
 
-        setSoldQty(pdQuantity);
 
-        const updateInfo = {
-            email,
-            pdName,
-            pdPrice,
-            pdPicture,
-            pdDescription,
-            pdCategory,
-            pdQuantity,
-            supplierName
+        let updateInfo;
+        if (pdPrice >= 0 && pdQuantity >= 0) {
+            setSoldQty(pdQuantity);
+            updateInfo = {
+                email: email,
+                pdName: pdName,
+                pdPrice: pdPrice,
+                pdPicture: pdPicture,
+                pdDescription: pdDescription,
+                pdCategory: pdCategory,
+                pdQuantity: pdQuantity,
+                supplierName: supplierName,
+                remarks: `last updated on ${day}/${month}/${year} at ${hours}:${minutes}:${seconds}`
+            }
+        } else {
+            return toast.error("Price and Quantity must be greater than 0");
         }
 
         updateMethod(id, updateInfo);
@@ -75,7 +92,7 @@ const UpdateInventory = () => {
 
     return (
         <section className='py-5 px-md-5'>
-        <PageTitle title="UpdateInventory"/>
+            <PageTitle title="UpdateInventory" />
             <div className="container">
                 <div className='mb-5 text-center display-5 fw-bold d-flex justify-content-center align-items-center'>
                     <img
@@ -92,12 +109,17 @@ const UpdateInventory = () => {
                     loading ? <Loading /> : (
 
                         <Form onSubmit={handleSubmit} className='bg-orangeTransparent py-4 p-2 p-md-5 w-md-75 mx-auto'>
+
+                            <p 
+                            id="remarks"
+                            className='text-center'><small>Updating by <strong>{user?.email} </strong> on <strong>{`${day}/${month}/${year}  ${hours}:${minutes}:${seconds}`}</strong></small></p>
+
                             <FloatingLabel
                                 controlId="floatingInput"
-                                label="Email address"
+                                label="Email address (creator)"
                                 className="mb-3"
                             >
-                                <Form.Control disabled readOnly value={user?.email || ""} required name='email' type="email" placeholder="name@example.com" />
+                                <Form.Control disabled readOnly value={email || ""} required name='email' type="email" placeholder="name@example.com" />
                             </FloatingLabel>
 
                             <FloatingLabel
@@ -191,9 +213,9 @@ const UpdateInventory = () => {
                 <div className='position-fixed plusBtn border border-white bg-orangeTransparent p-1 p-md-3 rounded-3'>
                     <p className='text-center'>
                         <strong className='display-3 fw-bold'>
-                            <CountUp 
-                            duration={.1}
-                            end={soldQty}
+                            <CountUp
+                                duration={.1}
+                                end={soldQty}
                             />
                         </strong>
                         <small className='d-none d-md-inline-block'>

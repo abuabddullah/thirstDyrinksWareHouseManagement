@@ -22,15 +22,20 @@ const UploadItems = () => {
         const pdQuantity = e.target?.pdQuantity?.value;
         const supplierName = e.target?.supplierName?.value;
 
-        const itemInfo = {
-            email: email,
-            pdName: pdName,
-            pdPrice: pdPrice,
-            pdPicture: pdPicture,
-            pdDescription: pdDescription,
-            pdCategory: pdCategory,
-            pdQuantity: pdQuantity,
-            supplierName: supplierName
+        let itemInfo;
+        if (pdPrice >= 0 && pdQuantity >= 0) {
+            itemInfo = {
+                email: email,
+                pdName: pdName,
+                pdPrice: pdPrice,
+                pdPicture: pdPicture,
+                pdDescription: pdDescription,
+                pdCategory: pdCategory,
+                pdQuantity: pdQuantity,
+                supplierName: supplierName
+            }
+        } else {
+            return toast.error("Price and Quantity must be greater than 0");
         }
 
 

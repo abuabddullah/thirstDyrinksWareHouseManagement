@@ -9,7 +9,7 @@ import LoginDeleteModal from '../../Login-Register-RequireAuth/LoginDeleteModal/
 
 const SingleItem = ({ item }) => {
     const [user, loading, error] = useAuthState(auth);
-    const { _id, pdName, pdPrice, pdPicture, pdDescription, email, pdCategory, pdQuantity, supplierName } = item || {};
+    const { _id, pdName, pdPrice, pdPicture, pdDescription, email, pdCategory, pdQuantity, supplierName, remarks } = item || {};
 
     const location = useLocation();
     const pathName = location?.pathname;
@@ -33,6 +33,9 @@ const SingleItem = ({ item }) => {
                                 <h4>Category : <strong>{pdCategory}</strong></h4>
                                 <h4>Quantity : <strong>{pdQuantity}</strong></h4>
                                 <h4>Supplier : <strong>{supplierName}</strong></h4>
+                                {
+                                    remarks ? <code className='text-muted'>{remarks}</code> : null
+                                }
                             </div>
                             <div className="d-grid gap-2">
 

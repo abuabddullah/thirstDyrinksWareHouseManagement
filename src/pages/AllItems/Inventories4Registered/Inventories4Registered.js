@@ -99,6 +99,7 @@ const Inventories4Registered = () => {
                         <th>Quantity </th>
                         <th>Supplier </th>
                         <th>Description</th>
+                        <th>Remarks</th>
                         <th>Action</th>
 
                     </tr>
@@ -120,6 +121,7 @@ const Inventories4Registered = () => {
                                     <td>{item?.pdQuantity}</td>
                                     <td>{item?.supplierName}</td>
                                     <td>{item?.pdDescription.slice(0, 40) + ". . ."}</td>
+                                    <td>{item?.remarks}</td>
                                     <td>
                                         <div className="d-grid gap-2">
                                             <DeleteModal _id={item?._id} />

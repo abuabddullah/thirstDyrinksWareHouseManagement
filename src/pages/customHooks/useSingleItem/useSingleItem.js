@@ -9,7 +9,7 @@ const useSingleItem = (id) => {
             .then(data => {
                 setItem(data);
             })
-    }, [id,item.pdQuantity]);
+    }, [id,item.pdQuantity,item]);
     return [item, setItem];
 };
 
