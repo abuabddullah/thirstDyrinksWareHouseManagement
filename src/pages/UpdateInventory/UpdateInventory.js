@@ -111,7 +111,6 @@ const UpdateInventory = () => {
                         <Form onSubmit={handleSubmit} className='bg-orangeTransparent py-4 p-2 p-md-5 w-md-75 mx-auto'>
 
                             <p 
-                            id="remarks"
                             className='text-center'><small>Updating by <strong>{user?.email} </strong> on <strong>{`${day}/${month}/${year}  ${hours}:${minutes}:${seconds}`}</strong></small></p>
 
                             <FloatingLabel
