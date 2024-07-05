@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useSingleBlog = (id) => {
     const [blog, setBlog] = useState({});
     useEffect(() => {
-        const url = `https://still-citadel-40412.herokuapp.com/blogs/${id}`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/blogs/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {

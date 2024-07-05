@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const updateMethod = (id, updateInfo) => {
 
 
-    const url = `https://still-citadel-40412.herokuapp.com/items/${id}`;
+    const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/items/${id}`;
     fetch(url, {
         method: 'PUT',
         headers: {
@@ -23,4 +23,4 @@ const updateMethod = (id, updateInfo) => {
 
 export {
     updateMethod
-}
+};

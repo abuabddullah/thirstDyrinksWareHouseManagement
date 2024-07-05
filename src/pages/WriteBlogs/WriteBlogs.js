@@ -34,7 +34,7 @@ const WriteBlogs = () => {
         }
 
 
-        const url = `https://still-citadel-40412.herokuapp.com/blogs`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/blogs`;
         fetch(url, {
             method: 'POST',
             headers: {

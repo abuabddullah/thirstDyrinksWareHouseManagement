@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Pagination, Row } from 'react-bootstrap';
-import useItems from '../../customHooks/useItems/useItems';
 import SingleItem from '../../HomePage/SingleItem/SingleItem';
 import Loading from '../../sharedPages/Loading/Loading';
 
@@ -13,7 +12,7 @@ const Inventories4NonRegistered = () => {
     const [currentPage, setCurrentPage] = useState(0);
     // load data as per pagination
     useEffect(() => {
-        const url = `https://still-citadel-40412.herokuapp.com/items?currentPage=${currentPage}&perPageProducts=${perPageProducts}`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/items?currentPage=${currentPage}&perPageProducts=${perPageProducts}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -25,7 +24,7 @@ const Inventories4NonRegistered = () => {
 
     // get total product count from db and set total page
     useEffect(() => {
-        const url = `https://still-citadel-40412.herokuapp.com/itemsCount`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/itemsCount`;
         fetch(url)
             .then(res => res.json())
             .then(data => {

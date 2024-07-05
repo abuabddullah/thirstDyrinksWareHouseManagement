@@ -4,7 +4,7 @@ Project Repo Link(Frontend): [https://github.com/ProgrammingHeroWC4/warehouse-ma
 Live Site link(Frontend): [https://thirstydrinks-11.web.app/](https://thirstydrinks-11.web.app/) 
 
 Project Repo Link(Backend): [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-abuabddullah](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-abuabddullah) \
-Live Site link(Backend): [https://still-citadel-40412.herokuapp.com/](https://still-citadel-40412.herokuapp.com/) 
+Live Site link(Backend): [https://thirstdyrinkswarehousemanagement-server.onrender.com/](https://thirstdyrinkswarehousemanagement-server.onrender.com/) 
 
 Stack over-flow link : [https://stackoverflow.com/questions/72079374/how-to-get-star-rating-review-from-user-to-mogodb-and-again-get-it-in-ui-by-reac](https://stackoverflow.com/questions/72079374/how-to-get-star-rating-review-from-user-to-mogodb-and-again-get-it-in-ui-by-reac)  
 

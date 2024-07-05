@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
+import { useEffect, useState } from 'react';
 
 const useMyItems = (user) => {
     const [myItems, setMyItems] = useState([]);
 
 
     useEffect(() => {
-        const url = `https://still-citadel-40412.herokuapp.com/myItems`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/myItems`;
         fetch(url,{
             headers: {
                 'authorization': `${user.email} ${localStorage.getItem("accessToken")}`,

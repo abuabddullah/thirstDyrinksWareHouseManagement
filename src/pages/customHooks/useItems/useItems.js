@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        const url = `https://still-citadel-40412.herokuapp.com/items`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/items`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));

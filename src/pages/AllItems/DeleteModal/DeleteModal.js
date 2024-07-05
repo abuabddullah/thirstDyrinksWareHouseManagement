@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { GiCrossedSabres } from "react-icons/gi";
 import { AiFillDelete } from "react-icons/ai";
-import useItems from '../../customHooks/useItems/useItems';
+import { GiCrossedSabres } from "react-icons/gi";
 import { toast } from 'react-toastify';
+import useItems from '../../customHooks/useItems/useItems';
 
 const DeleteModal = ({ _id }) => {
     const [show, setShow] = useState(false);
@@ -16,7 +16,7 @@ const DeleteModal = ({ _id }) => {
     const [items, setItems] = useItems();
     const handleDelete = (id) => {
 
-        const url = `https://still-citadel-40412.herokuapp.com/items/${id}`;
+        const url = `https://thirstdyrinkswarehousemanagement-server.onrender.com/items/${id}`;
         fetch(url, {
             method: 'DELETE',
         })

@@ -40,7 +40,7 @@ const UploadItems = () => {
 
 
         // post new item to db
-        const url = "https://still-citadel-40412.herokuapp.com/items";
+        const url = "https://thirstdyrinkswarehousemanagement-server.onrender.com/items";
         fetch(url, {
             method: 'POST',
             headers: {
